@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>Title</title>
+</head>
+<body>
+    <a href="/add">Add an action item to your com.example.demo.Todo list</a><br />
+    <div th:each="todo : ${todos}"> //thymeleaf loop
+        <h4 th:inline="text">[[${todo.title}]] due [[$[todo.duedate]]]</h4> </div>
+        <p th:inline="number">[[${todo.priority}]]</p>
+</body>
+</html>
